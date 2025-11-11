@@ -123,8 +123,8 @@ The first login will prompt for the user and email of the used id_ed25519 github
 
 ```
 u@ubuntu:~$ ssh devenv.devpod
-Enter your GitHub username: 
-Enter your GitHub email: 
+git config --global user.name: username
+git config --global user.email: email@example.com
 ➜ /workspaces/devenv
 $
 ```
