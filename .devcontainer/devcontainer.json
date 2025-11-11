@@ -1,0 +1,7 @@
+{
+  "name": "$new_pod_name",
+  "image": "mcr.microsoft.com/devcontainers/base:debian-12",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  }
+}
