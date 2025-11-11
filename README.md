@@ -2,7 +2,7 @@
 
 A minimal dotfiles repo for a docker and devpod dev-environment with git set to use existing github ssh keys. Built on Debian GNU/Linux 12 (bookworm).
 
-With some personal tuning done, of course. 
+With some personal tuning done, of course. Here's the quick and dirty:
 
 ---
 
@@ -15,7 +15,7 @@ This example is based on a new minimal ubuntu 24.04 server/workstation installat
 This quick start assumes your id_ed25519 key is ready to go and in place with the correct permissions on the host workstation or VM.
 
 ```
-$ ls -l ~/.ssh | grep id_ed25519
+$ ls -l ~/.ssh/id_ed25519
 -rw-------  1 u u  411 Nov 11 18:02 id_ed25519
 ```
 
@@ -119,7 +119,7 @@ ssh $new_pod_name.devpod
 
 #### Finish github setup
 
-The first login will prompt for the user and email of the used id_ed25519 github key owner.
+The first login will prompt for the user and email of the used id_ed25519 github key owner. If this isn't handled right away, we will have to do it later when trying to commit.
 
 ```
 u@ubuntu:~$ ssh devenv.devpod
@@ -131,7 +131,7 @@ $
 
 #### Enjoy!
 
-That's all there is to setting up dotfiles-min on a fresh machine with github ssh keys.
+That's all there is to setting up this quick and dirty dotfiles-min on a fresh machine with github ssh keys.
 
 ---
 
@@ -170,7 +170,7 @@ Contains patch files and archived originals for customizations made to the devpo
 
 #### .patches/
 
-Contains patch files and archived originals for customizations made to the devpod container config files like ~/.bashrc.
+Contains patch files and archived originals for customizations made to the devpod container config files like ~/.bashrc. [.patches/README.md] also includes diff code examples.
 
 
 
