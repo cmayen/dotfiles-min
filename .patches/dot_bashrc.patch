@@ -45,12 +45,12 @@
 +
 +# Check if Git user.name is already set globally
 +if ! git config --global user.name > /dev/null 2>&1; then
-+    read -p "Enter your GitHub username: " github_username
++    read -p "git config --global user.name: " github_username
 +    git config --global user.name "$github_username"
 +fi
 +# Check if Git user.email is already set globally
 +if ! git config --global user.email > /dev/null 2>&1; then
-+    read -p "Enter your GitHub email: " github_email
++    read -p "git config --global user.email: " github_email
 +    git config --global user.email "$github_email"
 +fi
 +
