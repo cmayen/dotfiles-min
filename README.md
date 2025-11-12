@@ -63,13 +63,14 @@ exec su -l $USER
 
 ### Create and Launch a basic devpod to get things started
 
-**Option 1**
+- **Option 1**
 
 Create a minimal devcontainer.json file to start with. This is helpful for a quick deployment of a private dotfiles repo. The generated devcontainer.json file should match the repository one, as the local file is what starts the process.
 
 ```
 new_pod_name=devenv
 dotfiles_repo=cmayen/dotfiles-min
+
 mkdir $new_pod_name
 mkdir $new_pod_name/.devcontainer
 cat > $new_pod_name/.devcontainer/devcontainer.json << EOF
@@ -90,13 +91,14 @@ echo "DevPod: $new_pod_name Ready"
 echo "To Connect: ssh $new_pod_name.devpod"
 ```
 
-**Option 2**
+- **Option 2**
 
 Download the devcontainer.json from the public repo and place it locally for initialization. 
 
 ```
 new_pod_name=devenv
 dotfiles_repo=cmayen/dotfiles-min
+
 mkdir $new_pod_name
 mkdir $new_pod_name/.devcontainer
 
@@ -170,7 +172,7 @@ Contains the devcontainer.json devpod container config files.
 
 ### .patches/
 
-Contains patch files and archived originals for customizations made to the devpod container config files like ~/.bashrc. [.patches/README.md] also includes diff code examples.
+Contains patch files and archived originals for customizations made to the devpod container config files like ~/.bashrc. [.patches/README.md](.patches/README.md) also includes diff code examples.
 
 
 
