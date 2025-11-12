@@ -4,7 +4,7 @@ A minimal dotfiles repo for a docker and devpod dev-environment with git set to 
 
 With some personal tuning done, of course. Here's the quick and dirty:
 
-![CLI Example](https://raw.githubusercontent.com/cmayen/cmayen/refs/heads/main/dotfiles-min-cli-2511120951.webp)
+![CLI Example](https://raw.githubusercontent.com/cmayen/cmayen/refs/heads/main/dotfiles-min-cli-2511121042.webp)
 
 ---
 
