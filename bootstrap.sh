@@ -14,4 +14,7 @@ mkdir -p /home/$USER/.local/bin
 # diff -u .patches/dot_bashrc.original ~/.bashrc > .patches/dot_bashrc.patch
 patch /home/$USER/.bashrc < .patches/dot_bashrc.patch
 
+# patch the /root/.bashrc also
+sudo patch /root/.bashrc < .patches/root__dot_bashrc.patch
+
 exit 0
