@@ -10,7 +10,7 @@ With some personal tuning done, of course. Here's the quick and dirty:
 
 This example is based on a new minimal ubuntu 24.04 server/workstation installation on a virtual machine. Adapt this quick start to your needs and personal workstation design.
 
-#### SSH keys for git and github authentication.
+### SSH keys for git and github authentication.
 
 This quick start assumes your id_ed25519 key is ready to go and in place with the correct permissions on the host workstation or VM.
 
@@ -28,7 +28,7 @@ Note from the [GitHub docs about SSH keys](https://docs.github.com/en/authentica
 
 For more information about generation of a new GitHub SSH key or addition of an existing key to the ssh-agent, see [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
-#### Install Updates, Docker, DevPod, and setup keys.
+### Install Updates, Docker, DevPod, and setup keys.
 
 Install and setup what we need on the workstation.
 
@@ -61,7 +61,7 @@ echo "Re-Login as $USER:"
 exec su -l $USER
 ```
 
-#### Create and Launch a basic devpod to get things started
+### Create and Launch a basic devpod to get things started
 
 **Option 1**
 
@@ -106,20 +106,20 @@ curl https://raw.githubusercontent.com/$dotfiles_repo/refs/heads/main/.devcontai
 # spin up the devpod in the folder
 devpod up $new_pod_name --ide none --dotfiles git@github.com:$dotfiles_repo
 
-# ssh into the pod
+# output the devpod is ready and example ssh command
 echo "DevPod: $new_pod_name Ready"
 echo "To Connect: ssh $new_pod_name.devpod"
 ```
 
-#### Connect to the devcontainer
+### Connect to the devcontainer
 
 ```
 ssh $new_pod_name.devpod
 ```
 
-#### Finish github setup
+### Finish github setup
 
-The first login will prompt for the user and email of the used id_ed25519 github key owner. If this isn't handled right away, we will have to do it later when trying to commit.
+The first login will prompt for the user and email of the used id_ed25519 github key owner. If this isn't handled right away, we will have to setup git config later when actively trying to commit.
 
 ```
 u@ubuntu:~$ ssh devenv.devpod
@@ -129,7 +129,7 @@ git config --global user.email: email@example.com
 $
 ```
 
-#### Enjoy!
+### Enjoy!
 
 That's all there is to setting up this quick and dirty dotfiles-min on a fresh machine with github ssh keys.
 
@@ -151,7 +151,7 @@ That's all there is to setting up this quick and dirty dotfiles-min on a fresh m
 └── README.md
 ```
 
-#### bootstrap.sh
+### bootstrap.sh
 
 The bootstrap.sh script is automatically ran when the devpod is created. This will:
 - check for updates, apply them, and install vim
@@ -160,15 +160,15 @@ The bootstrap.sh script is automatically ran when the devpod is created. This wi
 
 ---
 
-#### .devcontainer/
+### .devcontainer/
 
-Contains patch files and archived originals for customizations made to the devpod container config files.
+Contains the devcontainer.json devpod container config files.
 
 
 
 ---
 
-#### .patches/
+### .patches/
 
 Contains patch files and archived originals for customizations made to the devpod container config files like ~/.bashrc. [.patches/README.md] also includes diff code examples.
 
