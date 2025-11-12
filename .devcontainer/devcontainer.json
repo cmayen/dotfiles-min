@@ -1,5 +1,5 @@
 {
-  "name": "$new_pod_name",
+  "name": "dotfiles-min",
   "image": "mcr.microsoft.com/devcontainers/base:debian-12",
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {}
