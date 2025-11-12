@@ -121,7 +121,7 @@ ssh $new_pod_name.devpod
 
 ### Finish github setup
 
-The first login will prompt for the user and email of the used id_ed25519 github key owner. If this isn't handled right away, we will have to setup git config later when actively trying to commit.
+The first login will prompt for the user and email of the used id_ed25519 github key owner if it is not automatically detected/setup from the host. If this isn't handled right away, we will have to setup git config later when actively trying to commit.
 
 ```
 u@ubuntu:~$ ssh devenv.devpod
