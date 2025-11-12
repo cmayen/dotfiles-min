@@ -1,0 +1,18 @@
+--- /home/vscode/dotfiles/.patches/root__dot_bashrc.original	2025-11-12 16:09:11.875340773 +0000
++++ /root/.bashrc	2025-11-12 16:12:32.027181678 +0000
+@@ -35,7 +35,7 @@
+         fi`'
+     local lightblue='\[\033[1;34m\]'
+     local removecolor='\[\033[0m\]'
+-    PS1="${userpart} ${lightblue}\w ${gitbranch}${removecolor}\$ "
++    PS1="${userpart} ${lightblue}\w ${gitbranch}${removecolor}# "
+     unset -f __bash_prompt
+ }
+ __bash_prompt
+@@ -60,3 +60,6 @@
+     # Append to PROMPT_COMMAND to call precmd before displaying the prompt
+     PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND; }precmd"
+ fi
++
++export LANG="en_US.UTF-8"
++

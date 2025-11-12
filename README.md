@@ -151,6 +151,8 @@ That's all there is to setting up this quick and dirty dotfiles-min on a fresh m
 ├── .patches
 │   ├── dot_bashrc.original
 │   ├── dot_bashrc.patch
+│   ├── root__dot_bashrc.original
+│   ├── root__dot_bashrc.patch
 │   └── README.md
 └── README.md
 ```
@@ -160,7 +162,7 @@ That's all there is to setting up this quick and dirty dotfiles-min on a fresh m
 The bootstrap.sh script is automatically ran when the devpod is created. This will:
 - check for updates, apply them, and install vim
 - setup a local bin path at ~/.local/bin
-- patch the ~/.bashrc file with the repos stored patch file.
+- patch the .bashrc files with the repos stored patches.
 
 ---
 

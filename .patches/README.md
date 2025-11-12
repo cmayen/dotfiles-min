@@ -4,19 +4,6 @@ Modifications to the base image files.
 ---
 
 
-
-#### .patches/dot_bashrc.original
-The original ~/.bashrc file when the dotfiles-min repo was developed.
-
----
-
-#### .patches/dot_bashrc.patch
-A patch file generated to update the devpods ~/.bashrc file
-
----
-
-
-
 ## To generate a new dot_bashrc.patch
 
 - checkout a new branch in the ~/dotfiles/ repo
@@ -36,4 +23,25 @@ mv ~/dotfiles/.patches/dot_bashrc.patch.new ~/dotfiles/.patches/dot_bashrc.patch
 - add and commit, create pull request, merge, etc
 
 
+
+---
+
+
+## for /root/.bashrc
+Login as root
+```
+sudo su -
+```
+run the diff, set ownership and exit back to normal user
+```
+diff -u /home/vscode/dotfiles/.patches/root__dot_bashrc.original \
+  /root/.bashrc > /home/vscode/dotfiles/.patches/root__dot_bashrc.patch
+chown vscode:vscode /home/vscode/dotfiles/.patches/root__dot_bashrc.patch
+exit
+```
+##### Why modify the /root/.bashrc ?
+There are some issues with both the vscode user and the root user on the microsoft base:debian-12 image being used. 
+
+- Specifically new line wrapping in the CLI. adding `export LANG="en_US.UTF-8"` to both .bashrc files fixes that issue.
+- The root user prompt by default uses `$` and I prefer to see `#` so the /root/.bashrc is patched for the prompt.
 
