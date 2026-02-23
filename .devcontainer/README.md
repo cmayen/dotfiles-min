@@ -47,4 +47,3 @@ git push -u origin main
 
 - Now spin up the new devpod using a modified private repo example from the quick start targetting dotfiles-new.
 
-And buy me a coffee or somethin'! ☕️ lol
